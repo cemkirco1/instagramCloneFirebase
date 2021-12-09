@@ -53,7 +53,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juI-hK-Wtp"/>
-                                    <action selector="loginClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQr-xJ-QCJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkp-IJ-5kY">
@@ -78,7 +77,7 @@
                     <connections>
                         <outlet property="emailText" destination="AsC-lj-X3d" id="12i-DU-soz"/>
                         <outlet property="passwordText" destination="1x4-vo-R27" id="qEW-qC-RGs"/>
-                        <segue destination="Cz6-Z7-z60" kind="presentation" identifier="loginto" modalPresentationStyle="fullScreen" id="Ru8-7X-49W"/>
+                        <segue destination="Cz6-Z7-z60" kind="presentation" identifier="loginto" destinationCreationSelector="loginto" modalPresentationStyle="fullScreen" id="Xac-Mm-LUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,7 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="d9m-qd-frn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person" catalog="system" id="XBB-53-HI9"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Item" selectedImage="person" catalog="system" id="XBB-53-HI9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyM-mN-Oa7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +175,7 @@
                         <outlet property="emailText" destination="ubi-Ld-7PO" id="w2q-8C-ELy"/>
                         <outlet property="nameText" destination="TOG-Sd-pgr" id="mBX-9i-NJd"/>
                         <outlet property="passwordText" destination="9Eg-K7-1Gu" id="TwX-HI-Fyr"/>
-                        <segue destination="Cz6-Z7-z60" kind="presentation" identifier="signupto" modalPresentationStyle="fullScreen" id="AZi-dR-A7Y"/>
+                        <segue destination="Cz6-Z7-z60" kind="presentation" identifier="signupto" destinationCreationSelector="signupto" modalPresentationStyle="fullScreen" id="AZi-dR-A7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sO9-xn-o3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -191,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-SW-gX5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select1" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-SW-gX5">
                                 <rect key="frame" x="20" y="129" width="374" height="326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -223,6 +222,7 @@
                     <connections>
                         <outlet property="commentText" destination="M99-lC-ZaI" id="LuG-5m-kck"/>
                         <outlet property="imageView" destination="Qeb-SW-gX5" id="9dX-Di-zm5"/>
+                        <outlet property="uploadButton" destination="VEn-UA-wIA" id="MLl-HK-aKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sf-Aq-wp1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,7 +241,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="456" id="tmA-SY-bLg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="456" id="tmA-SY-bLg" customClass="HomeViewCell" customModule="instagramClone_Firebase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="456"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tmA-SY-bLg" id="Dqv-ts-faQ">
@@ -273,6 +273,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClick:" destination="tmA-SY-bLg" eventType="touchUpInside" id="mDd-Mb-BoO"/>
+                                                    </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovF-q1-e4R">
                                                     <rect key="frame" x="23" y="336" width="31" height="28"/>
@@ -280,6 +283,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="tintColor" systemColor="systemPinkColor"/>
                                                     <state key="normal" image="heart.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="likeButtonPaintedClick:" destination="tmA-SY-bLg" eventType="touchUpInside" id="s1y-j6-Jiy"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49g-Qa-mIR">
                                                     <rect key="frame" x="55" y="336" width="31" height="28"/>
@@ -316,8 +322,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJL-0L-y5H">
+                                                    <rect key="frame" x="283" y="0.0" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="faa-kp-3sW" id="gRf-xH-IPW"/>
+                                            <outlet property="likeButton" destination="T39-h6-I17" id="2FV-sH-Bat"/>
+                                            <outlet property="likeButtonPainted" destination="ovF-q1-e4R" id="d56-La-q0m"/>
+                                            <outlet property="likeLabel" destination="faa-kp-3sW" id="QOb-a8-5Jz"/>
+                                            <outlet property="nameText" destination="eTC-Kz-N9E" id="CsT-3a-FPm"/>
+                                            <outlet property="postId" destination="zJL-0L-y5H" id="bJc-D0-Ai2"/>
+                                            <outlet property="postImage" destination="cNx-FA-3Jh" id="LAt-Z8-BZK"/>
+                                            <outlet property="profilePhoto" destination="TJz-lC-Alt" id="9y8-p3-n8I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -367,11 +390,11 @@
             </objects>
             <point key="canvasLocation" x="806" y="354"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="P9S-0D-MIO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c42-TR-32N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="house" catalog="system" id="ZSu-qA-5mu"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="house" catalog="system" id="ZSu-qA-5mu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pvd-MA-iDe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -390,7 +413,7 @@
         <scene sceneID="L7n-cI-KeO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XzS-n6-hMA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="plus.app" catalog="system" id="lOw-Dh-Cp4">
+                    <tabBarItem key="tabBarItem" tag="1" title="Item 2" selectedImage="plus.app" catalog="system" id="lOw-Dh-Cp4">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -410,7 +433,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="SyP-Pq-fzd"/>
-        <segue reference="Ru8-7X-49W"/>
+        <segue reference="Xac-Mm-LUh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
@@ -423,6 +446,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="select1" width="350" height="220"/>
         <image name="tray.fill" catalog="system" width="128" height="88"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -13,21 +13,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>cemkirkoyun.instagramClone-Firebase</string>
+	<string>com.cemkirkoyun.instagramClone-Firebase</string>
 	<key>PROJECT_ID</key>
 	<string>instagramclonefirebase-3e5e5</string>
 	<key>STORAGE_BUCKET</key>
 	<string>instagramclonefirebase-3e5e5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:192079191694:ios:eb531abc4ef123df4673df</string>
 </dict>
