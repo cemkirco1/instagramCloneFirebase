@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B25D8BC027623DFA0068171D /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D8BBF27623DFA0068171D /* SignUpController.swift */; };
 		B25F02F5276211E50004E511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F4276211E50004E511 /* AppDelegate.swift */; };
 		B25F02F7276211E50004E511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F6276211E50004E511 /* SceneDelegate.swift */; };
-		B25F02F9276211E50004E511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F8276211E50004E511 /* ViewController.swift */; };
+		B25F02F9276211E50004E511 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F8276211E50004E511 /* LoginController.swift */; };
 		B25F02FC276211E50004E511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25F02FA276211E50004E511 /* Main.storyboard */; };
 		B25F02FE276211E60004E511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25F02FD276211E60004E511 /* Assets.xcassets */; };
 		B25F0301276211E60004E511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25F02FF276211E60004E511 /* LaunchScreen.storyboard */; };
@@ -19,10 +20,11 @@
 /* Begin PBXFileReference section */
 		0BFCB21FF18CB23FEBDECC94 /* Pods_instagramClone_Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramClone_Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C345E158817BA59E4BB853 /* Pods-instagramClone-Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramClone-Firebase.debug.xcconfig"; path = "Target Support Files/Pods-instagramClone-Firebase/Pods-instagramClone-Firebase.debug.xcconfig"; sourceTree = "<group>"; };
+		B25D8BBF27623DFA0068171D /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		B25F02F1276211E50004E511 /* instagramClone-Firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagramClone-Firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25F02F4276211E50004E511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B25F02F6276211E50004E511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B25F02F8276211E50004E511 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B25F02F8276211E50004E511 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B25F02FB276211E50004E511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B25F02FD276211E60004E511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B25F0300276211E60004E511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 				22C345E158817BA59E4BB853 /* Pods-instagramClone-Firebase.debug.xcconfig */,
 				D424213F2AF5A8D8FC49F08E /* Pods-instagramClone-Firebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +59,47 @@
 				0BFCB21FF18CB23FEBDECC94 /* Pods_instagramClone_Firebase.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B25D8BB827623C660068171D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B25D8BBE27623D250068171D /* Profile */,
+				B25D8BBD27623D150068171D /* Upload */,
+				B25D8BBC27623D080068171D /* Home */,
+				B25D8BBB27623CF30068171D /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B25D8BBB27623CF30068171D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B25F02F8276211E50004E511 /* LoginController.swift */,
+				B25D8BBF27623DFA0068171D /* SignUpController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B25D8BBC27623D080068171D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B25D8BBD27623D150068171D /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		B25D8BBE27623D250068171D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		B25F02E8276211E40004E511 = {
@@ -81,9 +123,9 @@
 		B25F02F3276211E50004E511 /* instagramClone-Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				B25D8BB827623C660068171D /* Screens */,
 				B25F02F4276211E50004E511 /* AppDelegate.swift */,
 				B25F02F6276211E50004E511 /* SceneDelegate.swift */,
-				B25F02F8276211E50004E511 /* ViewController.swift */,
 				B25F02FA276211E50004E511 /* Main.storyboard */,
 				B25F02FD276211E60004E511 /* Assets.xcassets */,
 				B25F02FF276211E60004E511 /* LaunchScreen.storyboard */,
@@ -206,9 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B25F02F9276211E50004E511 /* ViewController.swift in Sources */,
+				B25F02F9276211E50004E511 /* LoginController.swift in Sources */,
 				B25F02F5276211E50004E511 /* AppDelegate.swift in Sources */,
 				B25F02F7276211E50004E511 /* SceneDelegate.swift in Sources */,
+				B25D8BC027623DFA0068171D /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
