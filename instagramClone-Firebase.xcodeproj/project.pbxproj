@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B25D8BC027623DFA0068171D /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D8BBF27623DFA0068171D /* SignUpController.swift */; };
+		B25D8BC227623EA20068171D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D8BC127623EA20068171D /* HomeController.swift */; };
+		B25D8BC427623EB20068171D /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D8BC327623EB20068171D /* UploadController.swift */; };
+		B25D8BC627623EC30068171D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D8BC527623EC30068171D /* ProfileController.swift */; };
+		B25D8BC8276241C90068171D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B25D8BC7276241C90068171D /* GoogleService-Info.plist */; };
 		B25F02F5276211E50004E511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F4276211E50004E511 /* AppDelegate.swift */; };
 		B25F02F7276211E50004E511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F6276211E50004E511 /* SceneDelegate.swift */; };
 		B25F02F9276211E50004E511 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F02F8276211E50004E511 /* LoginController.swift */; };
@@ -21,6 +25,10 @@
 		0BFCB21FF18CB23FEBDECC94 /* Pods_instagramClone_Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramClone_Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C345E158817BA59E4BB853 /* Pods-instagramClone-Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramClone-Firebase.debug.xcconfig"; path = "Target Support Files/Pods-instagramClone-Firebase/Pods-instagramClone-Firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		B25D8BBF27623DFA0068171D /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		B25D8BC127623EA20068171D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		B25D8BC327623EB20068171D /* UploadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
+		B25D8BC527623EC30068171D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		B25D8BC7276241C90068171D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B25F02F1276211E50004E511 /* instagramClone-Firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagramClone-Firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25F02F4276211E50004E511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B25F02F6276211E50004E511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		B25D8BBC27623D080068171D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B25D8BC127623EA20068171D /* HomeController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -91,6 +100,7 @@
 		B25D8BBD27623D150068171D /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				B25D8BC327623EB20068171D /* UploadController.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -98,6 +108,7 @@
 		B25D8BBE27623D250068171D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B25D8BC527623EC30068171D /* ProfileController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 				B25F02FA276211E50004E511 /* Main.storyboard */,
 				B25F02FD276211E60004E511 /* Assets.xcassets */,
 				B25F02FF276211E60004E511 /* LaunchScreen.storyboard */,
+				B25D8BC7276241C90068171D /* GoogleService-Info.plist */,
 				B25F0302276211E60004E511 /* Info.plist */,
 			);
 			path = "instagramClone-Firebase";
@@ -194,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25F0301276211E60004E511 /* LaunchScreen.storyboard in Resources */,
+				B25D8BC8276241C90068171D /* GoogleService-Info.plist in Resources */,
 				B25F02FE276211E60004E511 /* Assets.xcassets in Resources */,
 				B25F02FC276211E50004E511 /* Main.storyboard in Resources */,
 			);
@@ -248,10 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25D8BC627623EC30068171D /* ProfileController.swift in Sources */,
 				B25F02F9276211E50004E511 /* LoginController.swift in Sources */,
 				B25F02F5276211E50004E511 /* AppDelegate.swift in Sources */,
+				B25D8BC427623EB20068171D /* UploadController.swift in Sources */,
 				B25F02F7276211E50004E511 /* SceneDelegate.swift in Sources */,
 				B25D8BC027623DFA0068171D /* SignUpController.swift in Sources */,
+				B25D8BC227623EA20068171D /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
