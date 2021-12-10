@@ -15,9 +15,9 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeButtonPainted: UIButton!
-    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     
+    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var postId: UILabel!
     
     override func awakeFromNib() {

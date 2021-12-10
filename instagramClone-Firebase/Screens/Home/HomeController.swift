@@ -83,7 +83,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
                    cell.nameText.text = emailArray[indexPath.row]
                    cell.commentLabel.text = commentArray[indexPath.row]
                    cell.postId.text = documentIdArray[indexPath.row]
-                   cell.likeLabel.text = String(likeArray[indexPath.row])
+                   cell.likeLabel.text = String(likeArray[indexPath.row]) 
                    cell.postImage.sd_setImage(with: URL(string: self.postImageArray[indexPath.row]))
                
            

@@ -38,7 +38,7 @@ class ProfileController: UIViewController {
             {
                 if snapshot?.isEmpty != true && snapshot != nil
                 {
-                    let docRef = fireStoreDatabase.collection("Profile").document(<#T##documentPath: String##String#>)
+                   // let docRef = fireStoreDatabase.collection("Profile").document(<#T##documentPath: String##String#>)
                 }
             }
             

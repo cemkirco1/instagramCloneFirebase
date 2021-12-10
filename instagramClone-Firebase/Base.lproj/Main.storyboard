@@ -446,7 +446,7 @@
                                             <outlet property="commentLabel" destination="faa-kp-3sW" id="gRf-xH-IPW"/>
                                             <outlet property="likeButton" destination="T39-h6-I17" id="2FV-sH-Bat"/>
                                             <outlet property="likeButtonPainted" destination="ovF-q1-e4R" id="d56-La-q0m"/>
-                                            <outlet property="likeLabel" destination="faa-kp-3sW" id="QOb-a8-5Jz"/>
+                                            <outlet property="likeLabel" destination="7tl-LB-ceP" id="6bd-9j-x7L"/>
                                             <outlet property="nameText" destination="eTC-Kz-N9E" id="CsT-3a-FPm"/>
                                             <outlet property="postId" destination="zJL-0L-y5H" id="bJc-D0-Ai2"/>
                                             <outlet property="postImage" destination="cNx-FA-3Jh" id="LAt-Z8-BZK"/>
