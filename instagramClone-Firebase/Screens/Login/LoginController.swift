@@ -21,11 +21,13 @@ class LoginController: UIViewController {
     }
     
    
-    @IBAction func loginButtonClick(_ sender: Any){
+    @IBAction func loginButtonClick(_ sender: Any)
+    {
         
         if emailText.text != "" && passwordText.text != ""
         {
-            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { autdata, error in
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!)
+            { autdata, error in
                 if error != nil
                 {
                     self.errorAlert(title: "Error", message: error?.localizedDescription ?? "Network Error")
@@ -43,7 +45,8 @@ class LoginController: UIViewController {
         
     }
     
-    func errorAlert(title: String, message : String)  {
+    func errorAlert(title: String, message : String)
+    {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let button = UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(button)

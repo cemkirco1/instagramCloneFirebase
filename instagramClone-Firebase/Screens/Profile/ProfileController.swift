@@ -6,24 +6,60 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileController: UIViewController {
+    
+    @IBOutlet weak var profilePhoto: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var collecitonView: UICollectionView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
+    func getProfileDataFirbase()
+    {
+        
+        let fireStoreDatabase = Firestore.firestore()
+        
+        fireStoreDatabase.collection("Profile").addSnapshotListener
+        { (snapshot, error) in
+            
+            if error != nil
+            {
+                print("error")
+            }
+            else
+            {
+                if snapshot?.isEmpty != true && snapshot != nil
+                {
+                    let docRef = fireStoreDatabase.collection("Profile").document(<#T##documentPath: String##String#>)
+                }
+            }
+            
+        }
+        
+        
 
-    /*
-    // MARK: - Navigation
+       /* let db = Firestore.firestore()
+         let docRef = db.collection("Profile").document()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+         docRef.getDocument { (document, error) in
+             if let document = document, document.exists {
+                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                 print("Document data: \(dataDescription)")
+             } else {
+                 print("Document does not exist")
+             }
+         }
+        */
+        
     }
-    */
 
+ 
 }

@@ -34,12 +34,13 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let fireStoreDatabase = Firestore.firestore()
         
-        fireStoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { (snapshot, error) in
-            
+        fireStoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener
+        { (snapshot, error) in
             if error != nil{
                 print(error?.localizedDescription)
-            }else{
-                
+            }
+            else
+            {
                 if snapshot?.isEmpty != true && snapshot != nil{
                     self.postImageArray.removeAll(keepingCapacity: false)
                     self.commentArray.removeAll(keepingCapacity: false)
@@ -75,7 +76,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeViewCell
                    cell.nameText.text = emailArray[indexPath.row]
@@ -89,7 +91,8 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return emailArray.count
     }
 

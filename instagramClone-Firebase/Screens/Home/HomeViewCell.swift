@@ -25,13 +25,15 @@ class HomeViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    @IBAction func likeButtonClick(_ sender: Any) {
+    @IBAction func likeButtonClick(_ sender: Any)
+    {
         let firestoreDatabase = Firestore.firestore()
         likeButton.isHidden = true
         likeButtonPainted.isHidden = false
@@ -42,13 +44,15 @@ class HomeViewCell: UITableViewCell {
         }
     }
     
-    @IBAction func likeButtonPaintedClick(_ sender: Any) {
+    @IBAction func likeButtonPaintedClick(_ sender: Any)
+    {
         let firestoreDatabased = Firestore.firestore()
         
         likeButton.isHidden = false
         likeButtonPainted.isHidden = true
         
-        if let likeCounts = Int(likeLabel.text!){
+        if let likeCounts = Int(likeLabel.text!)
+        {
             let likeStores = ["likes" : likeCounts - 1 ] as [String : Any]
             firestoreDatabased.collection("Posts").document(postId.text!).setData(likeStores, merge: true)
         }

@@ -13,10 +13,8 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentText: UITextField!
-    
     @IBOutlet weak var uploadButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +34,8 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
         imageView.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
     }
@@ -52,7 +51,8 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
         
         let mediaFolder = storageRef.child("media")
         
-        if let data = imageView.image?.jpegData(compressionQuality: 0.5){
+        if let data = imageView.image?.jpegData(compressionQuality: 0.5)
+        {
             
             let uuid = UUID().uuidString
             
@@ -64,8 +64,10 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
                 }
                 else
                 {
-                    imageRef.downloadURL { (url, error) in
-                        if error == nil{
+                    imageRef.downloadURL
+                    { (url, error) in
+                        if error == nil
+                        {
                             let imageUrl = url?.absoluteString
                             
                             let firestoreDatabase = Firestore.firestore()
@@ -73,13 +75,16 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
                             
                             let firestorePost = ["imageUrl" : imageUrl!, "PostedBy" : Auth.auth().currentUser!.email!, "postComment" : self.commentText.text!, "date" : FieldValue.serverTimestamp(), "likes" : 0] as [String : Any]
                             
-                            firestoreRef = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { (error) in
+                            firestoreRef = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion:
+                            { (error) in
                                 
-                                if error != nil{
+                                if error != nil
+                                {
                                     self.errorAlert(title: "error", message: error?.localizedDescription ?? "Network Error")
                                     
                                 }
-                                else{
+                                else
+                                {
                                     self.imageView.image = UIImage(named: "select1.svg")
                                     self.commentText.text = ""
                                     self.tabBarController?.selectedIndex = 0
@@ -93,9 +98,6 @@ class UploadController: UIViewController, UIImagePickerControllerDelegate, UINav
             
         }
         
-    
-               
-           
     }
     
     
