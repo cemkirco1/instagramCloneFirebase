@@ -19,3 +19,6 @@ Upload
 <img src="Gif/uploadScreen.gif" width="200" height="400">
 
 
+# Spread the word!
+-----------------------------------
+Liked the project? Just give it a star :star: and spread the word!
